@@ -1,0 +1,23 @@
+<div class="container">
+  <!-- begin footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="contact">
+        <ul class="contact__list list-reset">
+          {% for contact in site.contact %}
+          <li class="contact__item">
+            <a class="contact__link" href="{{contact.link}}">{{contact.name}}</a>
+          </li>
+          {% endfor %}
+          
+          {% if site.github.is_project_page %}
+          <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+          {% endif %}
+          <p class="copyright">Copyright © 2004-2020 David Marker | Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/js/mode-switcher.js"></script>
+  <!-- end footer -->
+</div>
